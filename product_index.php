@@ -3,6 +3,10 @@
         window.location.href = 'product_view.php?view_id=' + id;
     }
 
+    function view_category(category) {
+        window.location.href = 'category_view.php?view_category=' + category;
+    }
+
     function edit_id(id) {
         window.location.href = 'product_edit.php?edit_id=' + id;
 
@@ -44,11 +48,12 @@ if (isset($_GET['delete_id'])) {
                         <th>NO</th>
                         <th>NAME</th>
                         <th>PRICE</th>
+                        <th>CATEGORY</th>
                         <th colspan="2">ACTIONS</th>
                     </tr>
                 </thead>
                 <?php
-                $sql_query = "SELECT * FROM products";
+                $sql_query = "SELECT * FROM products ORDER BY id DESC";
                 $result_set = mysqli_query($con, $sql_query);
                 $seq = 1;
                 while ($row = mysqli_fetch_row($result_set)) {
@@ -57,8 +62,8 @@ if (isset($_GET['delete_id'])) {
                         <tr>
                             <td><?php echo $seq; ?></td>
                             <td><a href="javascript:view_id('<?php echo $row[0]; ?>')" class="text-primary"><?php echo $row[1]; ?></a></td>
-                            <!-- <td><?php echo $row[2]; ?></td> -->
                             <td><?php echo "IDR " . number_format($row[2], 0, ",", ".") ?></td>
+                            <td><a href="javascript:view_category('<?php echo $row[4]; ?>')" class="text-primary"><?php echo $row[4]; ?></a></td>
                             <td>
                                 <a href="javascript:edit_id('<?php echo $row[0]; ?>')" class="btn btn-sm btn-warning">Edit</a>
                             </td>

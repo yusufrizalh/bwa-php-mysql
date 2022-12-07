@@ -31,6 +31,10 @@ if (isset($_GET['view_id'])) {
                     <td><?php echo "IDR " . number_format($fetched_row["price"], 0, ",", "."); ?></td>
                 </tr>
                 <tr>
+                    <td><label for="category" class="form-label">CATEGORY</label></td>
+                    <td><?php echo $fetched_row["category"]; ?></td>
+                </tr>
+                <tr>
                     <td><label for="description" class="form-label">DESCRIPTION</label></td>
                     <td><?php echo $fetched_row["description"]; ?></td>
                 </tr>

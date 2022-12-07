@@ -9,8 +9,9 @@ if (isset($_POST['btn-save'])) {
     $name = $_POST['name'];
     $price = $_POST['price'];
     $description = $_POST['description'];
+    $category = $_POST['category'];
 
-    $sql_query = "INSERT INTO products(`name`, `price`, `description`) VALUES('" . $name . "','" . $price . "','" . $description . "')";
+    $sql_query = "INSERT INTO products(`name`, `price`, `description`, `category`) VALUES('" . $name . "','" . $price . "','" . $description . "', '" . $category . "')";
     if (mysqli_query($con, $sql_query)) {
 ?>
         <script type="text/javascript">
@@ -41,11 +42,22 @@ if (isset($_POST['btn-save'])) {
                     <input type="text" class="form-control" autocomplete="off" id="name" name="name" placeholder="Input product name here">
                 </div>
                 <div class="mb-3">
-                    <label for="price" class="form-label">Product price</label>
+                    <label for="price" class="form-label">Product Price</label>
                     <input type="text" class="form-control" autocomplete="off" id="price" name="price" placeholder="Input product price here">
                 </div>
                 <div class="mb-3">
-                    <label for="price" class="form-label">Product price</label>
+                    <label for="price" class="form-label">Product Category</label>
+                    <select name="category" id="category" class="form-control">
+                        <option value="" disabled selected>CHOOSE ONE</option>
+                        <option value="SMARTPHONE">SMARTPHONE</option>
+                        <option value="LAPTOP">LAPTOP</option>
+                        <option value="MONITOR">MONITOR</option>
+                        <option value="COMPUTER">COMPUTER</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Description</label>
                     <textarea class="form-control" autocomplete="off" name="description" id="description" cols="30" rows="5" placeholder="Input product description here"></textarea>
                 </div>
                 <div class="mb-3">
