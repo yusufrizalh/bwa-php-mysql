@@ -33,7 +33,7 @@ if (isset($_POST['btn-save'])) {
     <?php include "./layouts/navbar.php"; ?>
     <div class="container mt-5 mb-5 py-5">
         <div>
-            <h3>PHP CRUD Functions | Create PRoduct</h3>
+            <h3>PHP CRUD Functions | Create Product</h3>
         </div>
         <div class="container mt-5">
             <form method="post" enctype="multipart/form-data">

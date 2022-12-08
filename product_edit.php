@@ -32,9 +32,6 @@ if (isset($_POST['btn-update'])) {
 <?php
     }
 }
-if (isset($_POST['btn-cancel'])) {
-    header("Location: indexproducts.php");
-}
 ?>
 
 <body>
