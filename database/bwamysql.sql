@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2022 at 01:58 PM
+-- Generation Time: Dec 09, 2022 at 07:06 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -81,9 +81,33 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `category`, `creat
 (2, 'MSI NOTEBOOK MODERN 14 C12M INTEL CORE I5-1235U', '10499000', 'Lorem ipsum dolor sit amet', 'LAPTOP', '2022-12-07 08:09:20'),
 (3, 'LOGITECH - COMBO WIRELESS KEYBOARD MK220', '269000', 'Lorem', 'OTHER', '2022-12-07 11:22:24'),
 (4, 'INFINIX SMARTPHONE ZERO X PRO SILVER', '5089000', 'A cras semper auctor neque vitae tempus. Et leo duis ut diam. Tortor condimentum lacinia quis vel eros donec ac. Vel pharetra vel turpis nunc eget lorem. Nec ullamcorper sit amet risus nullam. Volutpat commodo sed egestas egestas fringilla phasellus. Pretium fusce id velit ut tortor pretium viverra. Pretium vulputate sapien nec sagittis aliquam malesuada. Arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc. Eros donec ac odio tempor orci dapibus ultrices in. Turpis egestas sed tempus urna et pharetra pharetra massa massa. Feugiat in ante metus dictum at tempor. Sed arcu non odio euismod. Sed tempus urna et pharetra pharetra massa massa ultricies. Vitae nunc sed velit dignissim. Sagittis nisl rhoncus mattis rhoncus urna neque viverra.', 'SMARTPHONE', '2022-12-07 11:43:40'),
-(5, 'LENOVO CONVERTIBLE NOTEBOOK FLEX5-14ITL05 INTEL CORE I7', '15099000', 'Egestas congue quisque egestas diam in arcu cursus. Viverra aliquet eget sit amet tellus cras adipiscing. Nisi scelerisque eu ultrices vitae auctor eu. Vitae justo eget magna fermentum iaculis eu non diam. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Maecenas pharetra convallis posuere morbi leo.', 'LAPTOP', '2022-12-07 11:47:13'),
-(6, 'ACER DESKTOP AL IN ONE AC22-1650 AIO INTEL CORE I3', '7779000', 'Arcu dictum varius duis at consectetur lorem donec. Tortor at risus viverra adipiscing at in tellus integer feugiat. Dapibus ultrices in iaculis nunc sed. Dui sapien eget mi proin. Arcu felis bibendum ut tristique. ', 'COMPUTER', '2022-12-07 11:48:05'),
-(7, 'APPLE IPHONE 14 PLUS SERIES', '20599000', 'Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Diam maecenas sed enim ut sem viverra aliquet eget sit. Ultrices tincidunt arcu non sodales neque sodales ut.', 'SMARTPHONE', '2022-12-07 12:41:53');
+(5, 'LENOVO CONVERTIBLE NOTEBOOK FLEX5-14ITL05 INTEL CORE I7', '15099000', 'Egestas congue quisque egestas diam in arcu cursus. Viverra aliquet eget sit amet tellus cras adipiscing. Nisi scelerisque eu ultrices vitae auctor eu. Vitae justo eget magna fermentum iaculis eu non diam. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Maecenas pharetra convallis posuere morbi leo.', 'COMPUTER', '2022-12-07 11:47:13'),
+(6, 'ACER DESKTOP AL IN ONE AC22-1650 AIO INTEL CORE I3', '7779000', 'Arcu dictum varius duis at consectetur lorem donec. Tortor at risus viverra adipiscing at in tellus integer feugiat. Dapibus ultrices in iaculis nunc sed. Dui sapien eget mi proin. Arcu felis bibendum ut tristique. ', 'OTHER', '2022-12-07 11:48:05'),
+(7, 'APPLE IPHONE 14 PLUS SERIES', '21599000', 'Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Diam maecenas sed enim ut sem viverra aliquet eget sit. Ultrices tincidunt arcu non sodales neque sodales ut.', 'SMARTPHONE', '2022-12-07 12:41:53'),
+(9, 'Product Terbaru', '899000', 'Lorem', 'PRINTER', '2022-12-08 03:33:18'),
+(11, 'Product Terbaru 101', '3799000', '', 'COMPUTER', '2022-12-09 05:38:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `email`, `username`, `password`, `created_at`) VALUES
+(1, 'admin@email.com', 'administrator', 'Pa$$w0rd', '2022-12-09 05:24:15'),
+(2, 'rizal@email.com', 'yusufrizalh', 'Pa$$w0rd', '2022-12-09 05:24:38');
 
 --
 -- Indexes for dumped tables
@@ -102,6 +126,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -115,7 +145,13 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
