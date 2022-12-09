@@ -1,11 +1,11 @@
 <?php
-include "./layouts/headers.php";
+include "../layouts/headers.php";
 
-include_once "./config/dbconfig.php";
+include_once "../config/dbconfig.php";
 ?>
 
 <body>
-    <?php include "./layouts/navbar.php"; ?>
+    <?php include "../layouts/navbar_profile.php"; ?>
     <div class="container mt-5 mb-5 py-5">
         <div>
             <h3>PHP CRUD Functions | Products by Category</h3>
@@ -49,8 +49,10 @@ include_once "./config/dbconfig.php";
             </table>
         </div>
     </div>
+    <!-- need to open dropdown menu -->
+    <?php include "../layouts/popperjs.php"; ?>
 </body>
 
 <?php
-include "./layouts/footer.php";
+include "../layouts/footer.php";
 ?>

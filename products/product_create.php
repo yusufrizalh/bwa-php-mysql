@@ -1,9 +1,9 @@
 </head>
 
 <?php
-include "./layouts/headers.php";
+include "../layouts/headers.php";
 
-include_once "./config/dbconfig.php";
+include_once "../config/dbconfig.php";
 
 if (isset($_POST['btn-save'])) {
     $name = $_POST['name'];
@@ -30,7 +30,7 @@ if (isset($_POST['btn-save'])) {
 ?>
 
 <body>
-    <?php include "./layouts/navbar.php"; ?>
+    <?php include "../layouts/navbar_profile.php"; ?>
     <div class="container mt-5 mb-5 py-5">
         <div>
             <h3>PHP CRUD Functions | Create Product</h3>
@@ -66,8 +66,10 @@ if (isset($_POST['btn-save'])) {
             </form>
         </div>
     </div>
+    <!-- need to open dropdown menu -->
+    <?php include "../layouts/popperjs.php"; ?>
 </body>
 
 <?php
-include "./layouts/footer.php";
+include "../layouts/footer.php";
 ?>

@@ -10,10 +10,16 @@
                     <a class="nav-link" href="http://localhost/webphp/home.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/webphp/about.php">About</a>
+                    <a class="nav-link" href="http://localhost/webphp/features.php">Features</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/webphp/product_index.php">Products</a>
+                    <a class="nav-link" href="http://localhost/webphp/pricing.php">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/webphp/faq.php">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/webphp/about.php">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://localhost/webphp/auth/user_login.php">Login</a>

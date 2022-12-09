@@ -11,6 +11,9 @@ include "./session.php";
             <h3>Welcome, <?php echo $session_login; ?></h3>
         </div>
     </div>
+
+    <!-- need to open dropdown menu -->
+    <?php include "../layouts/popperjs.php"; ?>
 </body>
 
 <?php

@@ -1,7 +1,7 @@
 <?php
-include "./layouts/headers.php";
+include "../layouts/headers.php";
 
-include_once "./config/dbconfig.php";
+include_once "../config/dbconfig.php";
 
 if (isset($_GET['view_id'])) {
     $sql_query = "SELECT * FROM products WHERE id = " . $_GET['view_id'];
@@ -11,7 +11,7 @@ if (isset($_GET['view_id'])) {
 ?>
 
 <body>
-    <?php include "./layouts/navbar.php"; ?>
+<?php include "../layouts/navbar_profile.php"; ?>
     <div class="container mt-5 mb-5 py-5">
         <div>
             <h3>PHP CRUD Functions | Product Detail</h3>
@@ -41,8 +41,10 @@ if (isset($_GET['view_id'])) {
             </table>
         </div>
     </div>
+    <!-- need to open dropdown menu -->
+    <?php include "../layouts/popperjs.php"; ?>
 </body>
 
 <?php
-include "./layouts/footer.php";
+include "../layouts/footer.php";
 ?>

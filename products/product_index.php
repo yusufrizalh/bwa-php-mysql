@@ -21,9 +21,9 @@
 
 </head>
 <?php
-include "./layouts/headers.php";
+include "../layouts/headers.php";
 
-include_once "./config/dbconfig.php";
+include_once "../config/dbconfig.php";
 
 if (isset($_GET['delete_id'])) {
     $sql_query = "DELETE FROM products WHERE id = " . $_GET['delete_id'];
@@ -33,13 +33,13 @@ if (isset($_GET['delete_id'])) {
 ?>
 
 <body>
-    <?php include "./layouts/navbar.php"; ?>
+    <?php include "../layouts/navbar_profile.php"; ?>
     <div class="container mt-5 mb-5 py-5">
         <div>
             <h3>PHP CRUD Functions | All Products</h3>
         </div>
         <div>
-            <a href="http://localhost/webphp/product_create.php" class="btn btn-md btn-primary">New Product</a>
+            <a href="http://localhost/webphp/products/product_create.php" class="btn btn-md btn-primary">New Product</a>
         </div>
         <div class="container mt-5">
             <table class="table table-bordered table-hover">
@@ -79,8 +79,10 @@ if (isset($_GET['delete_id'])) {
             </table>
         </div>
     </div>
+    <!-- need to open dropdown menu -->
+    <?php include "../layouts/popperjs.php"; ?>
 </body>
 
 <?php
-include "./layouts/footer.php";
+include "../layouts/footer.php";
 ?>
